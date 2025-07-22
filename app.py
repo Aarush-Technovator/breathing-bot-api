@@ -17,6 +17,10 @@ def chat():
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return jsonify({"response": response})
 
+@app.route('/')
+def health():
+    return 'Breathing Bot API is running!', 200
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
