@@ -1,0 +1,10 @@
+config:
+  runtime: "python3"
+  entrypoint: "predict.py"
+  python_version: "3.10"
+  system_packages:
+    - git
+  python_packages:
+    - torch
+    - transformers
+    - safetensors
